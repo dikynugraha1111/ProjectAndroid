@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bc"
+    tools:context=".risandio.MainActivity5">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            >
+            <ViewFlipper
+                android:id="@+id/gbr1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/judul"
+            android:layout_below="@id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:text="BANK SAMPAH MADRASAH JOGJA"
+                android:textColor="#5290EC"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ldesc"
+            android:layout_below="@id/judul"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:weightSum="1">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    app:tabTextColor="#5290EC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.appbar.AppBarLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/tulis"
+            android:orientation="horizontal"
+            android:layout_below="@+id/ldesc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_margin="30dp">
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

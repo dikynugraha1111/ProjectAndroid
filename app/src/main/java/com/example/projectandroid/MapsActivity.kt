@@ -13,6 +13,10 @@ import android.widget.LinearLayout
 import androidx.core.view.ViewCompat
 
 import androidx.fragment.app.Fragment
+import com.example.projectandroid.risandio.MainActivity2
+import com.example.projectandroid.risandio.MainActivity3
+import com.example.projectandroid.risandio.MainActivity4
+import com.example.projectandroid.risandio.MainActivity5
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -29,6 +33,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
 
     private lateinit var mMap: GoogleMap
     private lateinit var mMap2: GoogleMap
+    private lateinit var mMap3: GoogleMap
+    private lateinit var mMap4: GoogleMap
+    private lateinit var mMap5: GoogleMap
 
     lateinit var konten : LinearLayout
     lateinit var overBox : LinearLayout
@@ -60,22 +67,44 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
         mMap2 = googleMap
+        mMap3 = googleMap
+        mMap4 = googleMap
+        mMap5 = googleMap
 
         // Add a marker in Sydney and move the camera
         val uad = LatLng(-7.833234900000001,110.3831212)
-        val saya = LatLng(-7.8276337,110.3796486)
+        val briman = LatLng(-7.8276337,110.3796486)
+        val grojogan = LatLng(-7.845274, 110.390919)
+        val asri = LatLng(-7.835922, 110.391057)
+        val madrasah = LatLng(-7.830895, 110.387720)
 
         mMap.addMarker(MarkerOptions()
             .position(uad)
             .title("Marker"))
         mMap2.addMarker(MarkerOptions()
-            .position(saya)
-            .title("Saya"))
+            .position(briman)
+            .title("briman"))
+        mMap3.addMarker(MarkerOptions()
+            .position(grojogan)
+            .title("grojogan"))
+        mMap4.addMarker(MarkerOptions()
+            .position(asri)
+            .title("asri"))
+        mMap5.addMarker(MarkerOptions()
+            .position(madrasah)
+            .title("madrasah"))
+
 
         mMap.setOnMarkerClickListener(this)
         mMap2.setOnMarkerClickListener(this)
+        mMap3.setOnMarkerClickListener(this)
+        mMap4.setOnMarkerClickListener(this)
+        mMap5.setOnMarkerClickListener(this)
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(uad,15f))
-        mMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(saya,15f))
+        mMap2.moveCamera(CameraUpdateFactory.newLatLngZoom(briman,15f))
+        mMap3.moveCamera(CameraUpdateFactory.newLatLngZoom(grojogan,15f))
+        mMap4.moveCamera(CameraUpdateFactory.newLatLngZoom(asri,15f))
+        mMap5.moveCamera(CameraUpdateFactory.newLatLngZoom(madrasah,15f))
 
 //        Animation
         fromsmall = AnimationUtils.loadAnimation(this,R.anim.fromsmall)
@@ -99,16 +128,104 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnMarker
     override fun onMarkerClick(p0: Marker): Boolean {
         when(p0.title){
             "Marker"->{
-                val intentMain = Intent(this@MapsActivity, MainActivity::class.java)
-                startActivity(intentMain)
-            }
-            "Saya"->{
                 btnClose.alpha=1f
                 btnClose.startAnimation(forbtnClose)
                 overBox.alpha=1f
                 overBox.startAnimation(fromnothing)
                 konten.alpha=1f
                 konten.startAnimation(fromsmall)
+                btn_close.setOnClickListener {
+                    overBox.alpha=0f
+                    konten.startAnimation(toClose)
+                    btnClose.startAnimation(toClose)
+
+                    ViewCompat.animate(konten).setStartDelay(1000).alpha(0f).start()
+                    ViewCompat.animate(btnClose).setStartDelay(1000).alpha(0f).start()
+                }
+                btn_detail.setOnClickListener {
+                    val intentview = Intent(this@MapsActivity, MainActivity2::class.java)
+                    startActivity(intentview)
+                }
+            }
+            "briman"->{
+                btnClose.alpha=1f
+                btnClose.startAnimation(forbtnClose)
+                overBox.alpha=1f
+                overBox.startAnimation(fromnothing)
+                konten.alpha=1f
+                konten.startAnimation(fromsmall)
+                btn_close.setOnClickListener {
+                    overBox.alpha=0f
+                    konten.startAnimation(toClose)
+                    btnClose.startAnimation(toClose)
+
+                    ViewCompat.animate(konten).setStartDelay(1000).alpha(0f).start()
+                    ViewCompat.animate(btnClose).setStartDelay(1000).alpha(0f).start()
+                }
+                btn_detail.setOnClickListener {
+                    val intentview1 = Intent(this@MapsActivity, MainActivity2::class.java)
+                    startActivity(intentview1)
+                }
+            }
+            "grojogan"->{
+                btnClose.alpha=1f
+                btnClose.startAnimation(forbtnClose)
+                overBox.alpha=1f
+                overBox.startAnimation(fromnothing)
+                konten.alpha=1f
+                konten.startAnimation(fromsmall)
+                btn_close.setOnClickListener {
+                    overBox.alpha=0f
+                    konten.startAnimation(toClose)
+                    btnClose.startAnimation(toClose)
+
+                    ViewCompat.animate(konten).setStartDelay(1000).alpha(0f).start()
+                    ViewCompat.animate(btnClose).setStartDelay(1000).alpha(0f).start()
+                }
+                btn_detail.setOnClickListener {
+                    val intentview2 = Intent(this@MapsActivity, MainActivity3::class.java)
+                    startActivity(intentview2)
+                }
+            }
+            "asri"->{
+                btnClose.alpha=1f
+                btnClose.startAnimation(forbtnClose)
+                overBox.alpha=1f
+                overBox.startAnimation(fromnothing)
+                konten.alpha=1f
+                konten.startAnimation(fromsmall)
+                btn_close.setOnClickListener {
+                    overBox.alpha=0f
+                    konten.startAnimation(toClose)
+                    btnClose.startAnimation(toClose)
+
+                    ViewCompat.animate(konten).setStartDelay(1000).alpha(0f).start()
+                    ViewCompat.animate(btnClose).setStartDelay(1000).alpha(0f).start()
+                }
+                btn_detail.setOnClickListener {
+                    val intentview3 = Intent(this@MapsActivity, MainActivity4::class.java)
+                    startActivity(intentview3)
+                }
+            }
+            "madrasah"->{
+                btnClose.alpha=1f
+                btnClose.startAnimation(forbtnClose)
+                overBox.alpha=1f
+                overBox.startAnimation(fromnothing)
+                konten.alpha=1f
+                konten.startAnimation(fromsmall)
+                btn_close.setOnClickListener {
+                    overBox.alpha=0f
+                    konten.startAnimation(toClose)
+                    btnClose.startAnimation(toClose)
+
+                    ViewCompat.animate(konten).setStartDelay(1000).alpha(0f).start()
+                    ViewCompat.animate(btnClose).setStartDelay(1000).alpha(0f).start()
+                }
+                btn_detail.setOnClickListener {
+                    val intentview4 = Intent(this@MapsActivity, MainActivity5::class.java)
+                    startActivity(intentview4)
+                }
             }
         }
         return false

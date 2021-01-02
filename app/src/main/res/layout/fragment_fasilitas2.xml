@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".risandio.fasilitas2">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/judul"
+            android:layout_marginTop="30dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#5290EC"
+            android:textSize="28sp"
+            android:layout_centerHorizontal="true"
+            android:text="Harga Sampah"/>
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:background="#5290EC"
+            android:layout_below="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/judulplastik"
+                android:layout_toRightOf="@id/plastik1"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:text="(gr)Botol"/>
+            <TextView
+                android:id="@+id/judulkaleng"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/plastik1"
+                android:layout_toRightOf="@id/kaleng1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:text="(gr)kaleng"/>
+            <TextView
+                android:id="@+id/judulkertas"
+                android:layout_marginLeft="20dp"
+                android:layout_below="@id/kaleng1"
+                android:layout_toRightOf="@id/kertas1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:layout_centerHorizontal="true"
+                android:text="(gr)Alumn"/>
+            <TextView
+                android:text="Rp.3000  per"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:id="@+id/plastik1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/kaleng1"
+                android:layout_below="@+id/plastik1"
+                android:layout_width="150dp"
+                android:layout_marginTop="10dp"
+                android:text="Rp.2.500  per"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textSize="24sp" />
+            <TextView
+                android:id="@+id/kertas1"
+                android:layout_below="@+id/kaleng1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Rp.2.000  per"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#FFF"
+                android:textSize="24sp"
+                android:layout_marginBottom="20dp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

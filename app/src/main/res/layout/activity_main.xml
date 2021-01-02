@@ -4,14 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/btn_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="MAP"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PROFILE"
+        android:layout_gravity="center_horizontal"
         />
 
 </LinearLayout>

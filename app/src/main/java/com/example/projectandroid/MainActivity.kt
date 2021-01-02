@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.projectandroid.risandio.MainActivity2
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         btn_map.setOnClickListener(this)
+        btn_profile.setOnClickListener(this)
     }
 
     override fun onClick(p0: View) {
@@ -21,6 +23,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val intentMap = Intent(this@MainActivity, MapsActivity::class.java)
                 startActivity(intentMap)
             }
+           R.id.btn_profile->{
+
+           }
         }
     }
 
